@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="htmlCtrlApp" ng-csp＝"">
+<head>
+
+<link rel="stylesheet" type="text/css" href="http://lib.sinaapp.com/js/bootstrap/v3.0.0/css/bootstrap-theme.css">
+ 
+<link rel="stylesheet" type="text/css" href="http://lib.sinaapp.com/js/bootstrap/v3.0.0/css/bootstrap.css">
+
+<script src="js/jquery.js"></script>
+<script src="./bower_components/angular/angular.js"></script>
+<script src="./bower_components/persistence/lib/persistence.js"></script>
+<script src="./bower_components/persistence/lib/persistence.store.sql.js"></script>
+<script src="./bower_components/persistence/lib/persistence.store.websql.js"></script>
+<script src="./bower_components/react/react.js"></script>
+
+<script src="./bower_components/react/react-dom.js"></script>
+
+<script src="htmlCtrl.js"></script>
+</head>
+<body>
+    <div>
+        <button class="btn btn-primary">赞</button>
+    </div>
+<div ng-controller="HtmlController as ctrl">
+    <input type="text" ng-model="ctrl.database"  size="30"
+               placeholder="add new todo here">
+      <span>{{ctrl.remaining()}} of {{ctrl.todos.length}} remaining</span>
+      [ <a href="" ng-click="ctrl.archive()">archive</a> ]
+      <ul class="unstyled">
+        <li ng-repeat="todo in ctrl.todos">
+          <label class="checkbox">
+            <input type="checkbox" ng-model="todo.done">
+            <span class="done-{{todo.done}}">{{todo.text}}</span>
+          </label>
+        </li>
+      </ul>
+      <form ng-submit="ctrl.addTodo()">
+        <input type="text" ng-model="ctrl.todoText"  size="30"
+               placeholder="add new todo here">
+        <input class="btn-primary" type="submit" value="add">
+      </form>
+    </div>
+</body>
+</html>
