@@ -18,12 +18,19 @@
 <script src="htmlCtrl.js"></script>
 </head>
 <body>
+    
+<div ng-controller="HtmlController as ctrl">
+
+    <form ng-submit="ctrl.connect()">
+        <input type="text" ng-model="ctrl.database"  size="30"
+               placeholder="请输入数据库地址">
+        <input class="btn-primary" type="submit" value="connect">
+    </form>
+
     <div>
         <button class="btn btn-primary">赞</button>
     </div>
-<div ng-controller="HtmlController as ctrl">
-    <input type="text" ng-model="ctrl.database"  size="30"
-               placeholder="add new todo here">
+    
       <span>{{ctrl.remaining()}} of {{ctrl.todos.length}} remaining</span>
       [ <a href="" ng-click="ctrl.archive()">archive</a> ]
       <ul class="unstyled">
