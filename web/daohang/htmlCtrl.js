@@ -27,20 +27,23 @@ angular.module('htmlCtrlApp', [])
  };
  ctrl.getWebsites();
  ctrl.addWebsite = function(name,url,good){
-  var website ;
-  website.name =name;
+  var website = {"good":"0"};
+  website.name = name;
+  console.log(website);
   website.url = url;
+  console.log(website);
   website.good = good;
+  console.log(website);
   $http.post(ctrl.server+'/Website',JSON.stringify(website))
     .success(function(data, status, headers, config) {
       //加载成功之后做一些事
       ctrl.websites.push(data);
 
-        alert("增加网站成功");
+        // alert("增加网站成功");
       
     }).error(function(data, status, headers, config) {
       //处理错误
-        alert("增加网站失败");
+        // alert("增加网站失败");
     });
  };
  ctrl.findWebsite = function(url){
@@ -56,26 +59,46 @@ angular.module('htmlCtrlApp', [])
   $http.post(ctrl.server+'/Website',JSON.stringify(website))
     .success(function(data, status, headers, config) {
       
-        alert("更新网站成功");
+        // alert("更新网站成功");
     }).error(function(data, status, headers, config) {
       //处理错误
-        alert("更新网站失败");
+        // alert("更新网站失败");
     });
  };
  ctrl.goodWebsite =  function(){
-  chrome.tabs.getCurrent(function(tab){ 
-      console.log(tab.title); 
-      console.log(tab.url); 
+  chrome.tabs.query({ currentWindow: true, active: true }, function(tab){ 
+      console.log(tab[0].title); 
+      console.log(tab[0].url); 
       var a =  document.createElement('a');  
-      a.href = tab.url;  
+      a.href = tab[0].url;  
       var website = ctrl.findWebsite(a.href);
       if(website == null){
-          ctrl.addWebsite(tab.title,tab.url,1);
+          ctrl.addWebsite(tab[0].title,a.href,1);
+          ctrl.addHtml(tab[0].title,tab[0].url,1);
       }else{
         website.good ++;
         ctrl.updateWebsite(website);
+        ctrl.addHtml(tab[0].title,tab[0].url,1);
       }
   });
+ };
+
+ ctrl.addHtml = function(name,url,good){
+  var website = {"good":"0"};
+  website.name = name;
+  console.log(website);
+  website.url = url;
+  console.log(website);
+  $http.post(ctrl.server+'/Html',JSON.stringify(website))
+    .success(function(data, status, headers, config) {
+      //加载成功之后做一些事
+
+        // alert("增加网站成功");
+      
+    }).error(function(data, status, headers, config) {
+      //处理错误
+        // alert("增加网站失败");
+    });
  };
 
 

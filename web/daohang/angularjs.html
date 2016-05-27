@@ -26,19 +26,20 @@
                placeholder="请输入服务器地址">
         <input class="btn-primary" type="submit" value="保存">
     </form>
-
+<form ng-submit="ctrl.goodWebsite()">
     <div>
-        <button class="btn btn-primary">赞</button>
+        <button class="btn btn-primary" type="submit" value="赞">赞</button>
     </div>
+</form>
       <span>被点赞的网址,一共{{ctrl.websites.length}}个<span>
       <!-- [ <a href="" ng-click="ctrl.archive()">archive</a> ] -->
       <ul class="unstyled">
         <li ng-repeat="website in ctrl.websites">
-          <label class="checkbox">
+          <!-- <label class="checkbox"> -->
             <!-- <input type="checkbox" ng-model="website"> 
             < <span class="done-{{todo.done}}">{{website.url}}</span> -->
-            <span>{{website.url}}</span>
-          </label>
+            <span style="width:250px;display:block;overflow:hidden;white-space:nowrap; ">{{website.url}}</span>
+          <!-- </label> -->
         </li>
       </ul>
       <!-- <form ng-submit="ctrl.addTodo()">
