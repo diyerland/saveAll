@@ -49,14 +49,18 @@ angular.module('htmlCtrlApp', [])
  ctrl.findWebsite = function(url){
   for (var i=0;i<ctrl.websites.length;i++){
     var website=ctrl.websites[i];
+    console.log(website.url);
     if(website.url.indexOf(url)!=-1){
+      console.log(url);
       return website;
     }
   }
+  console.log("no website found");
   return null;
  };
  ctrl.updateWebsite = function(website){
-  $http.post(ctrl.server+'/Website',JSON.stringify(website))
+  console.log(JSON.stringify(website));
+  $http.post(ctrl.server+'/Website/'+website._id,JSON.stringify(website))
     .success(function(data, status, headers, config) {
       
         // alert("更新网站成功");
@@ -71,11 +75,13 @@ angular.module('htmlCtrlApp', [])
       console.log(tab[0].url); 
       var a =  document.createElement('a');  
       a.href = tab[0].url;  
-      var website = ctrl.findWebsite(a.href);
+      //alert(a.hostname);
+      var website = ctrl.findWebsite(a.hostname);
       if(website == null){
-          ctrl.addWebsite(tab[0].title,a.href,1);
+          ctrl.addWebsite(tab[0].title,a.hostname,1);
           ctrl.addHtml(tab[0].title,tab[0].url,1);
       }else{
+        website.url = a.hostname;
         website.good ++;
         ctrl.updateWebsite(website);
         ctrl.addHtml(tab[0].title,tab[0].url,1);
