@@ -21,31 +21,31 @@
     
 <div ng-controller="HtmlController as ctrl">
 
-    <form ng-submit="ctrl.connect()">
-        <input type="text" ng-model="ctrl.database"  size="30"
-               placeholder="请输入数据库地址">
-        <input class="btn-primary" type="submit" value="connect">
+    <form ng-submit="ctrl.saveServer()">
+        <input type="text" ng-model="ctrl.server"  size="30"
+               placeholder="请输入服务器地址">
+        <input class="btn-primary" type="submit" value="保存">
     </form>
 
     <div>
         <button class="btn btn-primary">赞</button>
     </div>
-    
-      <span>{{ctrl.remaining()}} of {{ctrl.todos.length}} remaining</span>
-      [ <a href="" ng-click="ctrl.archive()">archive</a> ]
+      <span>被点赞的网址,一共{{ctrl.websites.length}}个<span>
+      <!-- [ <a href="" ng-click="ctrl.archive()">archive</a> ] -->
       <ul class="unstyled">
-        <li ng-repeat="todo in ctrl.todos">
+        <li ng-repeat="website in ctrl.websites">
           <label class="checkbox">
-            <input type="checkbox" ng-model="todo.done">
-            <span class="done-{{todo.done}}">{{todo.text}}</span>
+            <!-- <input type="checkbox" ng-model="website"> 
+            < <span class="done-{{todo.done}}">{{website.url}}</span> -->
+            <span>{{website.url}}</span>
           </label>
         </li>
       </ul>
-      <form ng-submit="ctrl.addTodo()">
+      <!-- <form ng-submit="ctrl.addTodo()">
         <input type="text" ng-model="ctrl.todoText"  size="30"
                placeholder="add new todo here">
         <input class="btn-primary" type="submit" value="add">
-      </form>
+      </form> -->
     </div>
 </body>
 </html>

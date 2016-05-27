@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 const methodOverride = require('method-override')
 const mongoose = require('mongoose')
-const  restify = require('express-restify-mongoose')
+const restify = require('express-restify-mongoose')
 
 //var routes = require('./routes/index');
 //var users = require('./routes/users');
@@ -30,7 +30,17 @@ app.use(methodOverride())
 mongoose.connect('mongodb://localhost:27017/database')
 restify.serve(router,mongoose.model('Website',new mongoose.Schema({
   name: {type: String},
-  url:{type:String,required:true}
+  url:{type:String,required:true},
+  viewcount:{type:Number},
+  good:{type:Number},
+  bad:{type:Number}
+})))
+restify.serve(router,mongoose.model('Html',new mongoose.Schema({
+  name: {type: String},
+  url:{type:String,required:true},
+  viewcount:{type:Number},
+  good:{type:Number},
+  bad:{type:Number}
 })))
 
 app.use(router)
