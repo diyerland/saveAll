@@ -4,6 +4,9 @@ angular.module('htmlCtrlApp', [])
     // window.localStorage.load("local-save");
     window.localStorage.getItem("server");
     ctrl.server =  window.localStorage.server;
+    if(ctrl.server == null){
+      ctrl.server = "http://www.diyerland.com:3000/api/v1";
+    }
 
   ctrl.saveServer = function() {
       window.localStorage.server = ctrl.server;
