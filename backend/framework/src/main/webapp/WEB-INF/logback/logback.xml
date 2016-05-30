@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 minutes">
+	<property name="logPath" value="/logs/" />
+	<property name="defaultPattern" value="[%X{userLoggerName}] %date [%thread] %-5level %logger{80} - %msg%n" />
+
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<charset>UTF-8</charset>
+			<pattern>%date %-5level %logger{80} - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="fun" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>${logPath}/fun/fun.log</File>
+		<append>true</append>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${logPath}/fun/fun.log.%d{yyyy-MM-dd}</FileNamePattern>
+			<maxHistory>40</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<charset>UTF-8</charset>
+			<pattern>${defaultPattern}</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="fun-error" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>${logPath}/fun/fun-error.log</File>
+
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>ERROR</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+
+		<append>true</append>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${logPath}/fun/fun-error.log.%d{yyyy-MM-dd}</FileNamePattern>
+			<maxHistory>14</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<charset>UTF-8</charset>
+			<pattern>${defaultPattern}</pattern>
+		</encoder>
+	</appender>
+
+	<root>
+		<level value="DEBUG" />
+		<appender-ref ref="FILE" />
+		<appender-ref ref="fun"></appender-ref>
+		<appender-ref ref="fun-error"></appender-ref>
+	</root>
+
+	<logger name="com.xxx">
+		<level value="DEBUG" />
+	</logger>
+	
+	<logger name="org.springframework">
+		<level value="INFO" />
+	</logger>
+
+	<logger name="org.hibernate">
+		<level value="INFO" />
+	</logger>
+	
+	<logger name="net.sf.ehcache">
+		<level value="INFO" />
+	</logger>
+
+	<logger name="org.apache">
+		<level value="INFO" />
+	</logger>
+
+	<logger name="com.alibaba.dubbo">
+		<level value="INFO" />
+	</logger>
+
+	<logger name="net.rubyeye.xmemcached">
+		<level value="INFO" />
+	</logger>
+
+	<logger name="com.google.code">
+		<level value="INFO" />
+	</logger>
+
+	<logger name="com.netflix">
+		<level value="INFO" />
+	</logger>
+
+	<logger name="org.dozer">
+		<level value="INFO" />
+	</logger>
+</configuration>
