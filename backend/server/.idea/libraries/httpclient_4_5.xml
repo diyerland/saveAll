@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="httpclient-4.5">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib-scale/httpclient-4.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib-scale/httpmime-4.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

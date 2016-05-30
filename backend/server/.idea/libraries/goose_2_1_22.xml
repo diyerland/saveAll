@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="goose-2.1.22">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/goose-2.1.22.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

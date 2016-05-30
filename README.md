@@ -24,3 +24,12 @@ DAY2:
 DAY3:
 1.点赞的网页后台归类
 1.1 KNN分类算法
+
+DAY4:
+1.2 NaiveBayes分类算法
+
+DAY5:
+Boilerpipe网页正文提取
+
+DAY6:
+分词
