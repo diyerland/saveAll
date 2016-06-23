@@ -23,7 +23,7 @@ public class Test {
 	 */
 	public static void main(String[] args) {
 
-		//testLogin();
+		testLogin();
 		Client uc = new Client();
 
 		String s = uc.uc_user_active("各自", "$password", "$email");
@@ -37,6 +37,7 @@ public class Test {
 	public static void testLogin(){
 		
 		Client e = new Client();
+		String registerResult = e.uc_user_register("vcommon","123456","vcommon@126.com");
 		String result = e.uc_user_login("liangping2", "liangping");
 		
 		LinkedList<String> rs = XMLHelper.uc_unserialize(result);

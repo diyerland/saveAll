@@ -26,7 +26,7 @@ public class Client extends PHPFunctions{
 
 	public static boolean IN_UC = true;
 	public static String UC_IP = "127.0.0.1";
-	public static String UC_API = "http://www.diyerland.com/ucenter";
+	public static String UC_API = "http://www.diyerland.com/ucenter/api";
 	public static String UC_CONNECT = "";
 	public static String UC_KEY = "123456";
 	public static String UC_APPID = "3";
