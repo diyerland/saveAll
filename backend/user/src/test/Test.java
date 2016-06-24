@@ -38,7 +38,7 @@ public class Test {
 		
 		Client e = new Client();
 		String registerResult = e.uc_user_register("vcommon","123456","vcommon@126.com");
-		String result = e.uc_user_login("liangping2", "liangping");
+		String result = e.uc_user_login("vcommon", "123456");
 		
 		LinkedList<String> rs = XMLHelper.uc_unserialize(result);
 		if(rs.size()>0){
