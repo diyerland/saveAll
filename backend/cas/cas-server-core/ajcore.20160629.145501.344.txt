@@ -1,0 +1,548 @@
+---- AspectJ Properties ---
+AspectJ Compiler 1.6.11 built on Tuesday Mar 15, 2011 at 15:31:04 GMT
+---- Dump Properties ---
+Dump file: ajcore.20160629.145501.344.txt
+Dump reason: org.aspectj.apache.bcel.classfile.ClassFormatException
+Dump on exception: true
+Dump at exit condition: abort
+---- Exception Information ---
+org.aspectj.apache.bcel.classfile.ClassFormatException: File: 'java/lang/CharSequence.class': Invalid byte tag in constant pool: 18
+	at org.aspectj.apache.bcel.classfile.ClassParser.readConstantPool(ClassParser.java:192)
+	at org.aspectj.apache.bcel.classfile.ClassParser.parse(ClassParser.java:131)
+	at org.aspectj.weaver.bcel.BcelWorld.lookupJavaClass(BcelWorld.java:424)
+	at org.aspectj.weaver.bcel.BcelWorld.resolveDelegate(BcelWorld.java:376)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:467)
+	at org.aspectj.weaver.World.resolve(World.java:308)
+	at org.aspectj.weaver.World.resolve(World.java:218)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:97)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:41)
+	at org.aspectj.weaver.bcel.BcelObjectType.ensureGenericSignatureUnpacked(BcelObjectType.java:810)
+	at org.aspectj.weaver.bcel.BcelObjectType.getDeclaredInterfaces(BcelObjectType.java:257)
+	at org.aspectj.weaver.ReferenceType.getDeclaredInterfaces(ReferenceType.java:624)
+	at org.aspectj.weaver.ResolvedType.getDirectSupertypes(ResolvedType.java:76)
+	at org.aspectj.weaver.ResolvedType.collectInterTypeMungers(ResolvedType.java:1390)
+	at org.aspectj.weaver.ResolvedType.getInterTypeMungersIncludingSupers(ResolvedType.java:1371)
+	at org.aspectj.weaver.ResolvedType.checkInterTypeMungers(ResolvedType.java:1442)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:809)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:652)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.doPendingWeaves(AjLookupEnvironment.java:427)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.completeTypeBindings(AjLookupEnvironment.java:213)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.internalBeginToCompile(Compiler.java:616)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.beginToCompile(Compiler.java:357)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:371)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1021)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:268)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:181)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:248)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:405)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+---- System Properties ---
+idea.version=14.1.3
+java.runtime.name=Java(TM) SE Runtime Environment
+sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib
+java.vm.version=25.45-b02
+gopherProxySet=false
+java.vm.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+guice.disable.misplaced.annotation.check=true
+path.separator=:
+idea.launcher.port=7540
+java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+file.encoding.pkg=sun.io
+user.country=CN
+sun.java.launcher=SUN_STANDARD
+sun.os.patch.level=unknown
+java.vm.specification.name=Java Virtual Machine Specification
+user.dir=/Users/peter/Downloads/cas-server-4.0.0/cas-server-core
+java.runtime.version=1.8.0_45-b14
+java.awt.graphicsenv=sun.awt.CGraphicsEnvironment
+java.endorsed.dirs=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/endorsed
+os.arch=x86_64
+java.io.tmpdir=/var/folders/v5/fg2pr6555pj08vn2hcwm4ckh0000gn/T/
+line.separator=
+
+java.vm.specification.vendor=Oracle Corporation
+os.name=Mac OS X
+classworlds.conf=/Applications/IntelliJ IDEA 14.app/Contents/plugins/maven/lib/maven3/bin/m2.conf
+sun.jnu.encoding=UTF-8
+java.library.path=/Users/peter/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+java.specification.name=Java Platform API Specification
+java.class.version=52.0
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+os.version=10.11.5
+http.nonProxyHosts=127.0.0.1
+user.home=/Users/peter
+user.timezone=Asia/Shanghai
+java.awt.printerjob=sun.lwawt.macosx.CPrinterJob
+file.encoding=UTF-8
+idea.launcher.bin.path=/Applications/IntelliJ IDEA 14.app/Contents/bin
+java.specification.version=1.8
+java.class.path=/Applications/IntelliJ IDEA 14.app/Contents/plugins/maven/lib/maven3/boot/plexus-classworlds-2.4.jar:/Applications/IntelliJ IDEA 14.app/Contents/lib/idea_rt.jar
+user.name=peter
+java.vm.specification.version=1.8
+sun.java.command=com.intellij.rt.execution.application.AppMain org.codehaus.classworlds.Launcher -Didea.version=14.1.3 compile
+java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre
+sun.arch.data.model=64
+user.language=zh
+java.specification.vendor=Oracle Corporation
+awt.toolkit=sun.lwawt.macosx.LWCToolkit
+java.vm.info=mixed mode
+java.version=1.8.0_45
+java.ext.dirs=/Users/peter/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+sun.boot.class.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/classes
+java.vendor=Oracle Corporation
+maven.home=/Applications/IntelliJ IDEA 14.app/Contents/plugins/maven/lib/maven3
+file.separator=/
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+sun.io.unicode.encoding=UnicodeBig
+sun.cpu.endian=little
+socksNonProxyHosts=127.0.0.1
+ftp.nonProxyHosts=127.0.0.1
+sun.cpu.isalist=
+---- Command Line ---
+-encoding
+UTF-8
+-source
+1.6
+-target
+1.6
+-classpath
+/Users/peter/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/Users/peter/.m2/repository/com/github/inspektr/inspektr-audit/1.0.7.GA/inspektr-audit-1.0.7.GA.jar:/Users/peter/.m2/repository/org/jasig/service/persondir/person-directory-impl/1.5.1/person-directory-impl-1.5.1.jar:/Users/peter/.m2/repository/commons-codec/commons-codec/1.7/commons-codec-1.7.jar:/Users/peter/.m2/repository/org/springframework/spring-orm/3.2.6.RELEASE/spring-orm-3.2.6.RELEASE.jar:/Users/peter/.m2/repository/org/springframework/spring-jdbc/3.2.6.RELEASE/spring-jdbc-3.2.6.RELEASE.jar:/Users/peter/.m2/repository/org/springframework/spring-core/3.2.6.RELEASE/spring-core-3.2.6.RELEASE.jar:/Users/peter/.m2/repository/org/springframework/spring-beans/3.2.6.RELEASE/spring-beans-3.2.6.RELEASE.jar:/Users/peter/.m2/repository/org/springframework/spring-webmvc/3.2.6.RELEASE/spring-webmvc-3.2.6.RELEASE.jar:/Users/peter/.m2/repository/org/springframework/spring-context-support/3.2.6.RELEASE/spring-context-support-3.2.6.RELEASE.jar:/Users/peter/.m2/repository/org/springframework/spring-tx/3.2.6.RELEASE/spring-tx-3.2.6.RELEASE.jar:/Users/peter/.m2/repository/org/springframework/spring-context/3.2.6.RELEASE/spring-context-3.2.6.RELEASE.jar:/Users/peter/.m2/repository/org/springframework/security/spring-security-core/3.2.0.RELEASE/spring-security-core-3.2.0.RELEASE.jar:/Users/peter/.m2/repository/org/hsqldb/hsqldb/2.0.0/hsqldb-2.0.0.jar:/Users/peter/.m2/repository/org/hibernate/hibernate-validator/4.2.0.Final/hibernate-validator-4.2.0.Final.jar:/Users/peter/.m2/repository/org/hibernate/hibernate-core/4.1.0.Final/hibernate-core-4.1.0.Final.jar:/Users/peter/.m2/repository/org/hibernate/hibernate-entitymanager/4.1.0.Final/hibernate-entitymanager-4.1.0.Final.jar:/Users/peter/.m2/repository/javassist/javassist/3.12.1.GA/javassist-3.12.1.GA.jar:/Users/peter/.m2/repository/org/perf4j/perf4j/0.9.16/perf4j-0.9.16-log4jonly.jar:/Users/peter/.m2/repository/org/springframework/webflow/spring-webflow/2.3.2.RELEASE/spring-webflow-2.3.2.RELEASE.jar:/Users/peter/.m2/repository/commons-jexl/commons-jexl/1.1/commons-jexl-1.1.jar:/Users/peter/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar:/Users/peter/.m2/repository/joda-time/joda-time/2.2/joda-time-2.2.jar:/Users/peter/.m2/repository/org/opensymphony/quartz/quartz/1.6.1/quartz-1.6.1.jar:/Users/peter/.m2/repository/com/github/inspektr/inspektr-support-spring/1.0.7.GA/inspektr-support-spring-1.0.7.GA.jar:/Users/peter/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/peter/.m2/repository/org/mockito/mockito-core/1.9.5/mockito-core-1.9.5.jar:/Users/peter/.m2/repository/org/springframework/spring-test/3.2.6.RELEASE/spring-test-3.2.6.RELEASE.jar:/Users/peter/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar:/Users/peter/.m2/repository/org/aspectj/aspectjrt/1.7.2/aspectjrt-1.7.2.jar:/Users/peter/.m2/repository/org/aspectj/aspectjweaver/1.7.2/aspectjweaver-1.7.2.jar:/Users/peter/.m2/repository/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA.jar:/Users/peter/.m2/repository/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar:/Users/peter/.m2/repository/org/slf4j/slf4j-log4j12/1.7.5/slf4j-log4j12-1.7.5.jar:/Users/peter/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.5/jcl-over-slf4j-1.7.5.jar:/Users/peter/.m2/repository/com/github/inspektr/inspektr-common/1.0.7.GA/inspektr-common-1.0.7.GA.jar:/Users/peter/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/peter/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2/jaxb-impl-2.2.jar:/Users/peter/.m2/repository/javax/xml/bind/jaxb-api/2.2/jaxb-api-2.2.jar:/Users/peter/.m2/repository/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2.jar:/Users/peter/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/Users/peter/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar:/Users/peter/.m2/repository/commons-lang/commons-lang/2.5/commons-lang-2.5.jar:/Users/peter/.m2/repository/org/jasig/service/persondir/person-directory-api/1.5.1/person-directory-api-1.5.1.jar:/Users/peter/.m2/repository/org/springframework/spring-expression/3.2.6.RELEASE/spring-expression-3.2.6.RELEASE.jar:/Users/peter/.m2/repository/org/springframework/spring-web/3.2.6.RELEASE/spring-web-3.2.6.RELEASE.jar:/Users/peter/.m2/repository/org/springframework/spring-aop/3.2.6.RELEASE/spring-aop-3.2.6.RELEASE.jar:/Users/peter/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/Users/peter/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.1_spec/1.0.0.Final/jboss-transaction-api_1.1_spec-1.0.0.Final.jar:/Users/peter/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar:/Users/peter/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar:/Users/peter/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final.jar:/Users/peter/.m2/repository/org/jboss/logging/jboss-logging/3.1.0.CR2/jboss-logging-3.1.0.CR2.jar:/Users/peter/.m2/repository/org/javassist/javassist/3.15.0-GA/javassist-3.15.0-GA.jar:/Users/peter/.m2/repository/org/hibernate/common/hibernate-commons-annotations/4.0.1.Final/hibernate-commons-annotations-4.0.1.Final.jar:/Users/peter/.m2/repository/org/springframework/webflow/spring-binding/2.3.2.RELEASE/spring-binding-2.3.2.RELEASE.jar:/Users/peter/.m2/repository/org/springframework/webflow/spring-js/2.3.2.RELEASE/spring-js-2.3.2.RELEASE.jar:/Users/peter/.m2/repository/org/springframework/webflow/spring-js-resources/2.3.2.RELEASE/spring-js-resources-2.3.2.RELEASE.jar:/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/target/classes
+-d
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/target/classes
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/aspect/LogAspect.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/audit/spi/CredentialsAsFirstParameterResourceResolver.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/audit/spi/ServiceManagementResourceResolver.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/audit/spi/ServiceResourceResolver.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/audit/spi/TicketAsFirstParameterResourceResolver.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/audit/spi/TicketOrCredentialPrincipalResolver.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/AbstractAuthenticationHandler.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/AbstractCredential.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/AcceptAnyAuthenticationPolicyFactory.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/AcceptUsersAuthenticationHandler.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/AccountDisabledException.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/AccountPasswordMustChangeException.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/AllAuthenticationPolicy.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/AnyAuthenticationPolicy.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/Authentication.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/AuthenticationBuilder.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/AuthenticationException.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/AuthenticationHandler.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/AuthenticationManager.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/AuthenticationMetaDataPopulator.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/AuthenticationPolicy.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/BasicCredentialMetaData.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/ContextualAuthenticationPolicy.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/ContextualAuthenticationPolicyFactory.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/Credential.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/CredentialMetaData.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/handler/AuthenticationException.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/handler/BadCredentialsAuthenticationException.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/handler/BadPasswordAuthenticationException.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/handler/BadUsernameOrPasswordAuthenticationException.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/handler/BlockedCredentialsAuthenticationException.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/handler/DefaultPasswordEncoder.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/handler/NoOpPrincipalNameTransformer.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/handler/PasswordEncoder.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/handler/PlainTextPasswordEncoder.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/handler/PrefixSuffixPrincipalNameTransformer.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/handler/PrincipalNameTransformer.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/handler/support/AbstractPreAndPostProcessingAuthenticationHandler.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/handler/support/AbstractUsernamePasswordAuthenticationHandler.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/handler/support/HttpBasedServiceCredentialsAuthenticationHandler.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/handler/support/JaasAuthenticationHandler.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/handler/UncategorizedAuthenticationException.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/handler/UnknownUsernameAuthenticationException.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/handler/UnsupportedCredentialsException.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/HandlerResult.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/HttpBasedServiceCredential.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/ImmutableAuthentication.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/InvalidLoginLocationException.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/InvalidLoginTimeException.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/MixedPrincipalException.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/NotPreventedAuthenticationPolicy.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/OneTimePasswordCredential.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/PolicyBasedAuthenticationManager.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/PreventedException.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/principal/AbstractWebApplicationService.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/principal/BasicPrincipalResolver.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/principal/ChainingPrincipalResolver.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/principal/PersistentIdGenerator.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/principal/PersonDirectoryPrincipalResolver.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/principal/Principal.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/principal/PrincipalResolver.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/principal/RememberMeAuthenticationMetaDataPopulator.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/principal/Response.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/principal/Service.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/principal/ShibbolethCompatiblePersistentIdGenerator.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/principal/SimplePrincipal.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/principal/SimpleWebApplicationServiceImpl.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/principal/SingleLogoutService.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/principal/WebApplicationService.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/PrincipalException.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/RememberMeCredential.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/RememberMeUsernamePasswordCredential.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/RequiredHandlerAuthenticationPolicy.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/RequiredHandlerAuthenticationPolicyFactory.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/RootCasException.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/SuccessfulHandlerMetaDataPopulator.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/support/PasswordExpiringWarningMessage.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/support/PasswordPolicyConfiguration.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/UnresolvedPrincipalException.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/authentication/UsernamePasswordCredential.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/CasVersion.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/CentralAuthenticationService.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/CentralAuthenticationServiceImpl.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/logout/LogoutManager.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/logout/LogoutManagerImpl.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/logout/LogoutMessageCreator.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/logout/LogoutRequest.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/logout/LogoutRequestStatus.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/logout/SamlCompliantLogoutMessageCreator.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/Message.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/monitor/AbstractCacheMonitor.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/monitor/AbstractNamedMonitor.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/monitor/AbstractPoolMonitor.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/monitor/CacheStatistics.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/monitor/CacheStatus.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/monitor/DataSourceMonitor.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/monitor/HealthCheckMonitor.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/monitor/HealthStatus.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/monitor/MemoryMonitor.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/monitor/MemoryStatus.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/monitor/Monitor.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/monitor/PoolStatus.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/monitor/SessionMonitor.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/monitor/SessionStatus.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/monitor/SimpleCacheStatistics.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/monitor/Status.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/monitor/StatusCode.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/monitor/TicketRegistryState.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/remoting/server/RemoteCentralAuthenticationService.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/services/AbstractRegisteredService.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/services/DefaultServicesManagerImpl.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/services/InMemoryServiceRegistryDaoImpl.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/services/jmx/AbstractServicesManagerMBean.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/services/jmx/ReloadableServicesManagerMBean.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/services/jmx/ServicesManagerMBean.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/services/JpaServiceRegistryDaoImpl.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/services/LogoutType.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/services/RegexRegisteredService.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/services/RegisteredService.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/services/RegisteredServiceAttributeFilter.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/services/RegisteredServiceImpl.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/services/ReloadableServicesManager.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/services/ServiceContext.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/services/ServiceRegistryDao.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/services/ServicesManager.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/services/support/RegisteredServiceDefaultAttributeFilter.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/services/support/RegisteredServiceRegexAttributeFilter.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/services/UnauthorizedProxyingException.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/services/UnauthorizedServiceException.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/services/UnauthorizedSsoServiceException.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/AbstractTicket.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/ExpirationPolicy.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/InvalidTicketException.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/proxy/ProxyHandler.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/proxy/support/Cas10ProxyHandler.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/proxy/support/Cas20ProxyHandler.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/registry/AbstractDistributedTicketRegistry.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/registry/AbstractTicketRegistry.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/registry/DefaultTicketRegistry.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/registry/JpaTicketRegistry.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/registry/RegistryCleaner.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/registry/support/DefaultTicketRegistryCleaner.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/registry/support/JpaLockingStrategy.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/registry/support/LockingStrategy.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/registry/support/NoOpLockingStrategy.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/registry/TicketRegistry.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/ServiceTicket.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/ServiceTicketImpl.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/support/HardTimeoutExpirationPolicy.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/support/MultiTimeUseOrTimeoutExpirationPolicy.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/support/NeverExpiresExpirationPolicy.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/support/RememberMeDelegatingExpirationPolicy.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/support/ThrottledUseAndTimeoutExpirationPolicy.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/support/TicketGrantingTicketExpirationPolicy.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/support/TimeoutExpirationPolicy.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/Ticket.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/TicketCreationException.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/TicketException.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/TicketGrantingTicket.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/TicketGrantingTicketImpl.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/TicketState.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/TicketValidationException.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/ticket/UnsatisfiedAuthenticationPolicyException.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/util/AopUtils.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/util/ApplicationContextProvider.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/util/CalendarUtils.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/util/CustomBeanValidationPostProcessor.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/util/DefaultLongNumericGenerator.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/util/DefaultRandomStringGenerator.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/util/DefaultUniqueTicketIdGenerator.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/util/HttpClient.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/util/LongNumericGenerator.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/util/NumericGenerator.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/util/Pair.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/util/PrivateKeyFactoryBean.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/util/PublicKeyFactoryBean.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/util/RandomStringGenerator.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/util/SamlDateUtils.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/util/SimpleHttpClient.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/util/SpringAwareMessageMessageInterpolator.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/util/UniqueTicketIdGenerator.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/validation/AbstractCasProtocolValidationSpecification.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/validation/Assertion.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/validation/Cas10ProtocolValidationSpecification.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/validation/Cas20ProtocolValidationSpecification.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/validation/Cas20WithoutProxyingValidationSpecification.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/validation/ImmutableAssertion.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/validation/ValidationSpecification.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/web/bind/CredentialsBinder.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/web/DelegateController.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/web/flow/AbstractNonInteractiveCredentialsAction.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/web/flow/AuthenticationExceptionHandler.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/web/flow/AuthenticationViaFormAction.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/web/init/SafeContextLoaderListener.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/web/init/SafeDispatcherServlet.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/web/support/AbstractArgumentExtractor.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/web/support/ArgumentExtractor.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/web/support/CasArgumentExtractor.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/web/support/WebUtils.java
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/web/view/AbstractCasView.java
+---- Full Classpath ---
+/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/resources.jar(3500524 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/rt.jar(66499246 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/sunrsasign.jar(missing)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/jsse.jar(622733 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/jce.jar(114708 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/charsets.jar(3131363 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/jfr.jar(555272 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/classes(missing)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/ext/cldrdata.jar(3860522 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/ext/dnsns.jar(8286 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/ext/jfxrt.jar(18514793 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/ext/localedata.jar(1179654 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/ext/nashorn.jar(2008813 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/ext/sunec.jar(39773 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar(278075 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar(249387 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/ext/zipfs.jar(68837 bytes)
+/System/Library/Java/Extensions/MRJToolkit.jar(12849 bytes)
+/Users/peter/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar(489884 bytes)
+/Users/peter/.m2/repository/com/github/inspektr/inspektr-audit/1.0.7.GA/inspektr-audit-1.0.7.GA.jar(19261 bytes)
+/Users/peter/.m2/repository/org/jasig/service/persondir/person-directory-impl/1.5.1/person-directory-impl-1.5.1.jar(122233 bytes)
+/Users/peter/.m2/repository/commons-codec/commons-codec/1.7/commons-codec-1.7.jar(259600 bytes)
+/Users/peter/.m2/repository/org/springframework/spring-orm/3.2.6.RELEASE/spring-orm-3.2.6.RELEASE.jar(385030 bytes)
+/Users/peter/.m2/repository/org/springframework/spring-jdbc/3.2.6.RELEASE/spring-jdbc-3.2.6.RELEASE.jar(405594 bytes)
+/Users/peter/.m2/repository/org/springframework/spring-core/3.2.6.RELEASE/spring-core-3.2.6.RELEASE.jar(870911 bytes)
+/Users/peter/.m2/repository/org/springframework/spring-beans/3.2.6.RELEASE/spring-beans-3.2.6.RELEASE.jar(611663 bytes)
+/Users/peter/.m2/repository/org/springframework/spring-webmvc/3.2.6.RELEASE/spring-webmvc-3.2.6.RELEASE.jar(637304 bytes)
+/Users/peter/.m2/repository/org/springframework/spring-context-support/3.2.6.RELEASE/spring-context-support-3.2.6.RELEASE.jar(127762 bytes)
+/Users/peter/.m2/repository/org/springframework/spring-tx/3.2.6.RELEASE/spring-tx-3.2.6.RELEASE.jar(242237 bytes)
+/Users/peter/.m2/repository/org/springframework/spring-context/3.2.6.RELEASE/spring-context-3.2.6.RELEASE.jar(865120 bytes)
+/Users/peter/.m2/repository/org/springframework/security/spring-security-core/3.2.0.RELEASE/spring-security-core-3.2.0.RELEASE.jar(359510 bytes)
+/Users/peter/.m2/repository/org/hsqldb/hsqldb/2.0.0/hsqldb-2.0.0.jar(1256297 bytes)
+/Users/peter/.m2/repository/org/hibernate/hibernate-validator/4.2.0.Final/hibernate-validator-4.2.0.Final.jar(366592 bytes)
+/Users/peter/.m2/repository/org/hibernate/hibernate-core/4.1.0.Final/hibernate-core-4.1.0.Final.jar(4317092 bytes)
+/Users/peter/.m2/repository/org/hibernate/hibernate-entitymanager/4.1.0.Final/hibernate-entitymanager-4.1.0.Final.jar(476002 bytes)
+/Users/peter/.m2/repository/javassist/javassist/3.12.1.GA/javassist-3.12.1.GA.jar(644148 bytes)
+/Users/peter/.m2/repository/org/perf4j/perf4j/0.9.16/perf4j-0.9.16-log4jonly.jar(96994 bytes)
+/Users/peter/.m2/repository/org/springframework/webflow/spring-webflow/2.3.2.RELEASE/spring-webflow-2.3.2.RELEASE.jar(522586 bytes)
+/Users/peter/.m2/repository/commons-jexl/commons-jexl/1.1/commons-jexl-1.1.jar(132165 bytes)
+/Users/peter/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar(185140 bytes)
+/Users/peter/.m2/repository/joda-time/joda-time/2.2/joda-time-2.2.jar(573912 bytes)
+/Users/peter/.m2/repository/org/opensymphony/quartz/quartz/1.6.1/quartz-1.6.1.jar(445090 bytes)
+/Users/peter/.m2/repository/com/github/inspektr/inspektr-support-spring/1.0.7.GA/inspektr-support-spring-1.0.7.GA.jar(14012 bytes)
+/Users/peter/.m2/repository/junit/junit/4.11/junit-4.11.jar(245039 bytes)
+/Users/peter/.m2/repository/org/mockito/mockito-core/1.9.5/mockito-core-1.9.5.jar(1500011 bytes)
+/Users/peter/.m2/repository/org/springframework/spring-test/3.2.6.RELEASE/spring-test-3.2.6.RELEASE.jar(457904 bytes)
+/Users/peter/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar(105112 bytes)
+/Users/peter/.m2/repository/org/aspectj/aspectjrt/1.7.2/aspectjrt-1.7.2.jar(116847 bytes)
+/Users/peter/.m2/repository/org/aspectj/aspectjweaver/1.7.2/aspectjweaver-1.7.2.jar(1828687 bytes)
+/Users/peter/.m2/repository/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA.jar(47433 bytes)
+/Users/peter/.m2/repository/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar(26084 bytes)
+/Users/peter/.m2/repository/org/slf4j/slf4j-log4j12/1.7.5/slf4j-log4j12-1.7.5.jar(8869 bytes)
+/Users/peter/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.5/jcl-over-slf4j-1.7.5.jar(16517 bytes)
+/Users/peter/.m2/repository/com/github/inspektr/inspektr-common/1.0.7.GA/inspektr-common-1.0.7.GA.jar(7097 bytes)
+/Users/peter/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar(4467 bytes)
+/Users/peter/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2/jaxb-impl-2.2.jar(872831 bytes)
+/Users/peter/.m2/repository/javax/xml/bind/jaxb-api/2.2/jaxb-api-2.2.jar(104172 bytes)
+/Users/peter/.m2/repository/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2.jar(23346 bytes)
+/Users/peter/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar(62983 bytes)
+/Users/peter/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar(575389 bytes)
+/Users/peter/.m2/repository/commons-lang/commons-lang/2.5/commons-lang-2.5.jar(279193 bytes)
+/Users/peter/.m2/repository/org/jasig/service/persondir/person-directory-api/1.5.1/person-directory-api-1.5.1.jar(8124 bytes)
+/Users/peter/.m2/repository/org/springframework/spring-expression/3.2.6.RELEASE/spring-expression-3.2.6.RELEASE.jar(197208 bytes)
+/Users/peter/.m2/repository/org/springframework/spring-web/3.2.6.RELEASE/spring-web-3.2.6.RELEASE.jar(627372 bytes)
+/Users/peter/.m2/repository/org/springframework/spring-aop/3.2.6.RELEASE/spring-aop-3.2.6.RELEASE.jar(335773 bytes)
+/Users/peter/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar(445288 bytes)
+/Users/peter/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.1_spec/1.0.0.Final/jboss-transaction-api_1.1_spec-1.0.0.Final.jar(11209 bytes)
+/Users/peter/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar(313898 bytes)
+/Users/peter/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar(109318 bytes)
+/Users/peter/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final.jar(102661 bytes)
+/Users/peter/.m2/repository/org/jboss/logging/jboss-logging/3.1.0.CR2/jboss-logging-3.1.0.CR2.jar(60539 bytes)
+/Users/peter/.m2/repository/org/javassist/javassist/3.15.0-GA/javassist-3.15.0-GA.jar(648253 bytes)
+/Users/peter/.m2/repository/org/hibernate/common/hibernate-commons-annotations/4.0.1.Final/hibernate-commons-annotations-4.0.1.Final.jar(81271 bytes)
+/Users/peter/.m2/repository/org/springframework/webflow/spring-binding/2.3.2.RELEASE/spring-binding-2.3.2.RELEASE.jar(148444 bytes)
+/Users/peter/.m2/repository/org/springframework/webflow/spring-js/2.3.2.RELEASE/spring-js-2.3.2.RELEASE.jar(17381 bytes)
+/Users/peter/.m2/repository/org/springframework/webflow/spring-js-resources/2.3.2.RELEASE/spring-js-resources-2.3.2.RELEASE.jar(4412472 bytes)
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/target/classes(2 entries)
+---- Compiler Messages ---
+warning bad version number found in /Users/peter/.m2/repository/org/aspectj/aspectjrt/1.7.2/aspectjrt-1.7.2.jar expected 1.6.11 found 1.7.2
+info directory classpath entry does not exist: /Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/sunrsasign.jar
+info zipfile classpath entry does not exist: /Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/classes
+info Pipelining compilation
+error at (no source information available)
+/Users/peter/Downloads/cas-server-4.0.0/cas-server-core/src/main/java/org/jasig/cas/web/view/AbstractCasView.java:0::0 Internal compiler error
+org.aspectj.apache.bcel.classfile.ClassFormatException: File: 'java/lang/CharSequence.class': Invalid byte tag in constant pool: 18
+	at org.aspectj.apache.bcel.classfile.ClassParser.readConstantPool(ClassParser.java:192)
+	at org.aspectj.apache.bcel.classfile.ClassParser.parse(ClassParser.java:131)
+	at org.aspectj.weaver.bcel.BcelWorld.lookupJavaClass(BcelWorld.java:424)
+	at org.aspectj.weaver.bcel.BcelWorld.resolveDelegate(BcelWorld.java:376)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:467)
+	at org.aspectj.weaver.World.resolve(World.java:308)
+	at org.aspectj.weaver.World.resolve(World.java:218)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:97)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:41)
+	at org.aspectj.weaver.bcel.BcelObjectType.ensureGenericSignatureUnpacked(BcelObjectType.java:810)
+	at org.aspectj.weaver.bcel.BcelObjectType.getDeclaredInterfaces(BcelObjectType.java:257)
+	at org.aspectj.weaver.ReferenceType.getDeclaredInterfaces(ReferenceType.java:624)
+	at org.aspectj.weaver.ResolvedType.getDirectSupertypes(ResolvedType.java:76)
+	at org.aspectj.weaver.ResolvedType.collectInterTypeMungers(ResolvedType.java:1390)
+	at org.aspectj.weaver.ResolvedType.getInterTypeMungersIncludingSupers(ResolvedType.java:1371)
+	at org.aspectj.weaver.ResolvedType.checkInterTypeMungers(ResolvedType.java:1442)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:809)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:652)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.doPendingWeaves(AjLookupEnvironment.java:427)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.completeTypeBindings(AjLookupEnvironment.java:213)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.internalBeginToCompile(Compiler.java:616)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.beginToCompile(Compiler.java:357)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:371)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1021)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:268)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:181)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:248)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:405)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+
+abort ABORT -- (ClassFormatException) File: 'java/lang/CharSequence.class': Invalid byte tag in constant pool: 18
+File: 'java/lang/CharSequence.class': Invalid byte tag in constant pool: 18
+org.aspectj.apache.bcel.classfile.ClassFormatException: File: 'java/lang/CharSequence.class': Invalid byte tag in constant pool: 18
+	at org.aspectj.apache.bcel.classfile.ClassParser.readConstantPool(ClassParser.java:192)
+	at org.aspectj.apache.bcel.classfile.ClassParser.parse(ClassParser.java:131)
+	at org.aspectj.weaver.bcel.BcelWorld.lookupJavaClass(BcelWorld.java:424)
+	at org.aspectj.weaver.bcel.BcelWorld.resolveDelegate(BcelWorld.java:376)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:467)
+	at org.aspectj.weaver.World.resolve(World.java:308)
+	at org.aspectj.weaver.World.resolve(World.java:218)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:97)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:41)
+	at org.aspectj.weaver.bcel.BcelObjectType.ensureGenericSignatureUnpacked(BcelObjectType.java:810)
+	at org.aspectj.weaver.bcel.BcelObjectType.getDeclaredInterfaces(BcelObjectType.java:257)
+	at org.aspectj.weaver.ReferenceType.getDeclaredInterfaces(ReferenceType.java:624)
+	at org.aspectj.weaver.ResolvedType.getDirectSupertypes(ResolvedType.java:76)
+	at org.aspectj.weaver.ResolvedType.collectInterTypeMungers(ResolvedType.java:1390)
+	at org.aspectj.weaver.ResolvedType.getInterTypeMungersIncludingSupers(ResolvedType.java:1371)
+	at org.aspectj.weaver.ResolvedType.checkInterTypeMungers(ResolvedType.java:1442)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:809)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:652)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.doPendingWeaves(AjLookupEnvironment.java:427)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.completeTypeBindings(AjLookupEnvironment.java:213)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.internalBeginToCompile(Compiler.java:616)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.beginToCompile(Compiler.java:357)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:371)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1021)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:268)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:181)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:248)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:405)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+
