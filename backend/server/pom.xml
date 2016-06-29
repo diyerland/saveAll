@@ -268,6 +268,11 @@
             <artifactId>scala-library</artifactId>
             <version>2.10.4</version>
         </dependency>
+        <dependency>
+            <groupId>com.hankcs</groupId>
+            <artifactId>hanlp</artifactId>
+            <version>portable-1.2.8</version>
+        </dependency>
     </dependencies>
 
 </project>
